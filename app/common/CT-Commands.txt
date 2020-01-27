@@ -1,0 +1,22 @@
+Create Subcription
+------------------
+{
+    "key": "order-webhook",
+    "destination": {
+        "type": "SQS",
+        "queueUrl" : "https://sqs.us-east-1.amazonaws.com/611723861088/order",
+        "accessKey": "AKIAY43MVLRQF4MBUYYD",
+        "accessSecret": "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",
+        "region" : "us-west-2"
+    },
+    "messages": [
+        {
+            "resourceTypeId": "order",
+            "types": [
+                "OrderCreated",
+                "OrderStateChanged",
+                "OrderDeleted"
+            ]
+        }
+    ]
+}

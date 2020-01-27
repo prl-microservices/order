@@ -1,0 +1,24 @@
+{
+  "name": "order",
+  "version": "1.0.0",
+  "description": "Service Used to handle Webhook call from CommerceTools and send mail to appropriate Users",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Happy Happy",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.1.0",
+    "lodash": "^4.17.15",
+    "memory-cache": "^0.2.0",
+    "request": "^2.88.0",
+    "serverless-http": "^2.3.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}

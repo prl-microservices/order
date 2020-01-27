@@ -1,0 +1,20 @@
+service: order
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: us-west-2
+
+functions:
+  productMigration:
+    handler: app/function/gateway/order.notify
+    environment:
+      MAILGUN_KEY: 'DRUPAL_KEY_VALUE'
+      MAILGUN_SECRET: 'DRUPAL_SECRET_VALUE'
+    events:
+#      - http:
+#          path: /order
+#          method: post
+#          cors: true
+#      - sqs: arn:aws:sqs:us-west-2:611723861088:order
